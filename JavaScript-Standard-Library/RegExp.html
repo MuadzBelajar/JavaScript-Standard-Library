@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript RegExp</title>
+</head>
+<body>
+
+<script>
+  const text = "The rain in SPAIN stays mainly in the plain";
+
+  // Membuat RegExp tanpa flag
+  const regex1 = /ain/gi;
+  
+  // Test apakah ada yang match
+  console.log("Test dengan .test:", regex1.test(text));
+
+  // Cari semua hasil
+  const hasil = text.match(regex1);
+  console.log("Match semua:", hasil);
+
+  // Replace teks dengan RegExp
+  const replaced = text.replace(/ain/gi, "XXX");
+  console.log("Replace:", replaced);
+</script>
+
+</body>
+</html>

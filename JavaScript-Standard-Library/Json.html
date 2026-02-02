@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript JSON</title>
+</head>
+<body>
+
+<script>
+  // Contoh object JavaScript
+  const person = {
+    name: "Eko",
+    age: 20,
+    city: "Jakarta"
+  };
+
+  // Mengubah object menjadi JSON string
+  const jsonString = JSON.stringify(person);
+  console.log("JSON String:", jsonString);
+
+  // Mengubah JSON string kembali menjadi object
+  const jsonObj = JSON.parse(jsonString);
+  console.log("JavaScript Object:", jsonObj);
+
+  // Akses data dari object hasil parse
+  console.log("Nama:", jsonObj.name);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "Eko",
+  "age": 20,
+  "isStudent": true,
+  "skills": ["JavaScript", "HTML", "CSS"],
+  "address": {
+    "city": "Jakarta",
+    "country": "Indonesia"
+  }
+}

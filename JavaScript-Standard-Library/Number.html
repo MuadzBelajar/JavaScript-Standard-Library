@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Number</title>
+</head>
+<body>
+
+<script>
+  // Mengubah string menjadi number
+  const nilai1 = Number("123");
+  console.log("Number dari string '123':", nilai1);
+
+  // Menggunakan isInteger untuk cek bilangan bulat
+  console.log("Apakah 123 bilangan bulat?", Number.isInteger(123));
+  console.log("Apakah 12.5 bilangan bulat?", Number.isInteger(12.5));
+
+  // Mengubah angka ke string
+  const angka = 99;
+  console.log("Number ke string:", angka.toString());
+
+  // Number.parseFloat & parseInt
+  console.log("parseInt dari '10.5':", Number.parseInt("10.5"));
+  console.log("parseFloat dari '10.5':", Number.parseFloat("10.5"));
+</script>
+
+</body>
+</html>

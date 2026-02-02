@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Proxy</title>
+</head>
+<body>
+
+<script>
+  const target = {
+    message1: "Hello",
+    message2: "World"
+  };
+
+  const handler = {
+    get: function(obj, prop) {
+      if (prop === "message2") {
+        return "Proxy says hi!";
+      }
+      return obj[prop];
+    }
+  };
+
+  const proxy = new Proxy(target, handler);
+
+  console.log(proxy.message1); // Hello
+  console.log(proxy.message2); // Proxy says hi!
+</script>
+
+</body>
+</html>

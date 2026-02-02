@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Object</title>
+</head>
+<body>
+
+<script>
+  // Contoh object JavaScript
+  const person = {
+    firstName: "Eko",
+    lastName: "Khannedy",
+    age: 20,
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+
+  // Mengakses properti object
+  console.log(person.firstName);
+  console.log(person["lastName"]);
+
+  // Menggunakan method dalam object
+  console.log("Nama lengkap:", person.fullName());
+
+  // Menambah properti baru ke object
+  person.city = "Jakarta";
+  console.log("Tambah city:", person.city);
+
+  // Looping properti object
+  for (let key in person) {
+    console.log(key + ":", person[key]);
+  }
+</script>
+
+</body>
+</html>

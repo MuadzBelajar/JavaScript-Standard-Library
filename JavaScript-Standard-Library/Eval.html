@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Eval</title>
+</head>
+<body>
+
+<script>
+  const expression1 = "2 + 2";
+  const expression2 = "10 * 5";
+
+  // eval menjalankan string sebagai kode JavaScript
+  console.log("Hasil eval 2 + 2:", eval(expression1)); // 4
+  console.log("Hasil eval 10 * 5:", eval(expression2)); // 50
+
+  // eval juga bisa memanggil fungsi
+  function tambah(a, b) {
+    return a + b;
+  }
+
+  console.log("Memanggil fungsi melalui eval:", eval("tambah(3, 7)")); // 10
+</script>
+
+</body>
+</html>

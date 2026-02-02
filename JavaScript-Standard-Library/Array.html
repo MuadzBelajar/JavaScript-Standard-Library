@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Array Example</title>
+</head>
+<body>
+  <script>
+    // Membuat array
+    const cars = ["Saab", "Volvo", "BMW"];
+    console.log("Array awal:", cars);
+
+    // Mengakses elemen array
+    console.log("Elemen pertama:", cars[0]);
+
+    // Mengubah elemen array
+    cars[0] = "Opel";
+    console.log("Setelah diubah:", cars);
+
+    // Menambah elemen array
+    cars.push("Toyota");
+    console.log("Setelah push:", cars);
+
+    // Menghapus elemen terakhir
+    const last = cars.pop();
+    console.log("Elemen yang dihapus:", last);
+    console.log("Setelah pop:", cars);
+
+    // Mengetahui panjang array
+    console.log("Panjang array:", cars.length);
+
+    // Looping array sederhana
+    for (let i = 0; i < cars.length; i++) {
+      console.log(`Index ${i}: ${cars[i]}`);
+    }
+  </script>
+
+</body>
+</html>

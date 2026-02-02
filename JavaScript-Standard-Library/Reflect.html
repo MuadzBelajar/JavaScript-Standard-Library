@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Reflect</title>
+</head>
+<body>
+
+<script>
+  const person = {
+    firstName: "Eko",
+    lastName: "Khannedy"
+  };
+
+  // Menambah properti dengan Reflect.set
+  Reflect.set(person, "age", 20);
+  console.log("Reflect.set:", person);
+
+  // Mengambil properti dengan Reflect.get
+  const name = Reflect.get(person, "firstName");
+  console.log("Reflect.get firstName:", name);
+
+  // Menghapus properti dengan Reflect.deleteProperty
+  Reflect.deleteProperty(person, "lastName");
+  console.log("Reflect after delete:", person);
+</script>
+
+</body>
+</html>

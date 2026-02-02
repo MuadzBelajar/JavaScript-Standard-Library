@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Symbol</title>
+</head>
+<body>
+
+<script>
+  // Membuat Symbol
+  const id1 = Symbol("id");
+  const id2 = Symbol("id");
+
+  // Symbol selalu unik
+  console.log(id1 === id2); // false
+
+  // Menggunakan Symbol sebagai key object
+  const user = {
+    name: "Eko",
+    [id1]: 101
+  };
+
+  console.log("Nama:", user.name);
+  console.log("Symbol ID:", user[id1]);
+
+  // Symbol tidak ikut ter-loop
+  for (let key in user) {
+    console.log("Key:", key);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Map</title>
+</head>
+<body>
+
+<script>
+  // Membuat Map
+  const fruits = new Map();
+
+  // Menambahkan nilai ke Map
+  fruits.set("apple", 10);
+  fruits.set("banana", 5);
+  fruits.set("mango", 15);
+
+  // Mengambil nilai dari Map
+  console.log("Jumlah apel:", fruits.get("apple"));
+
+  // Mengetahui ukuran Map
+  console.log("Ukuran Map:", fruits.size);
+
+  // Looping Map
+  fruits.forEach((value, key) => {
+    console.log(key + " => " + value);
+  });
+
+  // Menghapus nilai dari Map
+  fruits.delete("banana");
+  console.log("Setelah hapus banana:", fruits);
+</script>
+
+</body>
+</html>

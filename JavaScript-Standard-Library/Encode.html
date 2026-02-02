@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Encode URI</title>
+</head>
+<body>
+
+<script>
+  const text = "Halo Dunia!";
+  
+  // encodeURI() — untuk seluruh URI
+  const encodedURI = encodeURI("https://contoh.com/" + text);
+  console.log("encodeURI:", encodedURI);
+
+  // encodeURIComponent() — untuk bagian dari URI
+  const encodedComponent = encodeURIComponent(text);
+  console.log("encodeURIComponent:", encodedComponent);
+</script>
+
+</body>
+</html>
