@@ -1,4 +1,4 @@
-<h3>JavaScript Standard Library</h3>
+<h1>JavaScript Standard Library</h1>
 <p>
 JavaScript Standard Library adalah kumpulan fitur bawaan JavaScript yang menyediakan
 berbagai objek, fungsi, dan method untuk mempermudah pengolahan data, logika program,
