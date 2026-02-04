@@ -1,254 +1,166 @@
 <h1>JavaScript Standard Library</h1>
 <p>
-JavaScript Standard Library adalah kumpulan fitur bawaan JavaScript yang menyediakan
-berbagai objek, fungsi, dan method untuk mempermudah pengolahan data, logika program,
-serta interaksi dengan sistem tanpa perlu library tambahan.
+JavaScript Standard Library adalah kumpulan fitur bawaan yang sudah tersedia secara
+default di dalam bahasa JavaScript. Library ini menyediakan berbagai objek, fungsi,
+dan method yang dapat langsung digunakan tanpa perlu mengimpor library tambahan.
+Tujuan utama dari standard library adalah untuk membantu pengembang dalam mengelola
+data, menjalankan logika program, serta membangun aplikasi yang efisien, konsisten,
+dan mudah dipelihara.
 </p>
 
 <h4>1. ARRAY</h4>
 <p>
-Array digunakan untuk menyimpan banyak data dalam satu variabel. Standard library Array
-menyediakan method seperti <code>map</code>, <code>filter</code>, dan <code>reduce</code> untuk memproses data
-secara efisien dan bersih.
+Array merupakan struktur data yang digunakan untuk menyimpan banyak nilai dalam satu
+variabel dengan urutan tertentu. JavaScript Standard Library menyediakan berbagai method
+pada Array seperti <code>map</code>, <code>filter</code>, <code>reduce</code>, <code>forEach</code>, dan
+<code>find</code> yang memungkinkan pengolahan data secara fungsional. Dengan Array, pengembang
+dapat mengelola kumpulan data secara lebih rapi, menghindari penggunaan variabel
+berulang, serta meningkatkan keterbacaan kode.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const numbers = [1, 2, 3, 4];
-const doubled = numbers.map(n => n * 2);
-console.log(doubled);
-&lt;/script&gt;
-</code></pre>
 
 <h4>2. BIGINT</h4>
 <p>
-BigInt digunakan untuk menangani bilangan bulat yang sangat besar dan tidak dapat
-ditangani oleh tipe data Number biasa.
+BigInt adalah tipe data khusus yang digunakan untuk menangani bilangan bulat dengan
+ukuran sangat besar, melebihi batas aman tipe data Number. Dalam JavaScript, Number
+memiliki keterbatasan presisi, sehingga BigInt hadir sebagai solusi untuk perhitungan
+numerik berskala besar, seperti perhitungan kriptografi, data keuangan, atau sistem
+yang membutuhkan akurasi tinggi pada bilangan bulat.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const big = 9007199254740991n;
-console.log(big + 1n);
-&lt;/script&gt;
-</code></pre>
 
 <h4>3. BOOLEAN</h4>
 <p>
-Boolean hanya memiliki dua nilai, yaitu <code>true</code> dan <code>false</code>. Tipe data ini digunakan
-untuk logika percabangan, kondisi, dan validasi program.
+Boolean adalah tipe data logika yang hanya memiliki dua nilai, yaitu <code>true</code> dan
+<code>false</code>. Boolean sangat penting dalam pengambilan keputusan di dalam program,
+seperti percabangan kondisi, validasi input, dan pengendalian alur program. Hampir
+seluruh logika aplikasi bergantung pada evaluasi nilai Boolean untuk menentukan
+tindakan yang akan dijalankan.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const isLogin = true;
-console.log(Boolean(isLogin));
-&lt;/script&gt;
-</code></pre>
 
 <h4>4. DATE</h4>
 <p>
-Date digunakan untuk mengelola waktu dan tanggal, seperti menampilkan tanggal saat ini,
-jam, dan melakukan perhitungan waktu.
+Object Date digunakan untuk menangani data yang berhubungan dengan waktu dan tanggal.
+Dengan Date, pengembang dapat mengambil waktu saat ini, menampilkan tanggal tertentu,
+menghitung selisih waktu, serta memformat tanggal sesuai kebutuhan aplikasi. Object ini
+sangat penting dalam aplikasi yang berhubungan dengan jadwal, log aktivitas, dan sistem
+berbasis waktu.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const now = new Date();
-console.log(now.toDateString());
-&lt;/script&gt;
-</code></pre>
 
 <h4>5. ENCODE</h4>
 <p>
-Encode digunakan untuk mengamankan data saat dikirim melalui URL agar karakter khusus
-tidak menyebabkan error.
+Fungsi encode dalam JavaScript, seperti <code>encodeURI</code> dan
+<code>encodeURIComponent</code>, digunakan untuk mengamankan data yang akan dikirim melalui URL.
+Proses encoding memastikan bahwa karakter khusus tidak menyebabkan kesalahan saat data
+ditransmisikan melalui jaringan, sehingga komunikasi data antara client dan server
+menjadi lebih aman dan stabil.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const text = "Halo Dunia!";
-console.log(encodeURIComponent(text));
-&lt;/script&gt;
-</code></pre>
 
 <h4>6. EVAL</h4>
 <p>
-Eval berfungsi untuk menjalankan string sebagai kode JavaScript. Namun, penggunaannya
-tidak disarankan karena dapat menimbulkan risiko keamanan.
+Eval adalah fungsi yang digunakan untuk mengeksekusi string sebagai kode JavaScript.
+Meskipun eval memberikan fleksibilitas tinggi, penggunaannya sangat tidak disarankan
+dalam praktik pengembangan modern karena berisiko terhadap keamanan dan performa.
+Eval dapat membuka celah terhadap serangan injeksi kode dan membuat program sulit
+dipelihara.
 </p>
-
-<pre><code>
-&lt;script&gt;
-console.log(eval("5 + 5"));
-&lt;/script&gt;
-</code></pre>
 
 <h4>7. JSON</h4>
 <p>
-JSON digunakan untuk pertukaran data antara client dan server. Data JSON dapat
-diubah menjadi string atau object menggunakan <code>JSON.stringify</code> dan
-<code>JSON.parse</code>.
+JSON (JavaScript Object Notation) adalah format pertukaran data yang ringan dan mudah
+dibaca oleh manusia maupun mesin. JSON sangat umum digunakan dalam komunikasi antara
+client dan server, terutama pada aplikasi web dan API. JavaScript menyediakan object
+JSON dengan method <code>stringify</code> dan <code>parse</code> untuk mengubah data antara
+object JavaScript dan format teks JSON.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const user = { name: "Eko", age: 20 };
-const json = JSON.stringify(user);
-console.log(JSON.parse(json));
-&lt;/script&gt;
-</code></pre>
 
 <h4>8. MAP</h4>
 <p>
-Map adalah struktur data key-value yang lebih fleksibel dibandingkan object biasa karena
-key dapat berupa tipe data apa pun.
+Map adalah struktur data key-value yang memungkinkan penggunaan berbagai tipe data
+sebagai key, tidak terbatas pada string saja. Map lebih fleksibel dan terstruktur
+dibandingkan object biasa, serta memiliki performa yang lebih baik untuk operasi
+penyimpanan dan pencarian data dalam jumlah besar.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const map = new Map();
-map.set("name", "Eko");
-console.log(map.get("name"));
-&lt;/script&gt;
-</code></pre>
 
 <h4>9. MATH</h4>
 <p>
-Math menyediakan fungsi matematika bawaan seperti akar kuadrat, pembulatan, dan
-bilangan acak.
+Object Math menyediakan berbagai fungsi matematika bawaan seperti perhitungan akar
+kuadrat, pembulatan angka, nilai maksimum dan minimum, serta bilangan acak. Math sangat
+berguna dalam aplikasi yang membutuhkan perhitungan numerik, simulasi, statistik, dan
+pengolahan data berbasis angka.
 </p>
-
-<pre><code>
-&lt;script&gt;
-console.log(Math.sqrt(16));
-console.log(Math.random());
-&lt;/script&gt;
-</code></pre>
 
 <h4>10. NUMBER</h4>
 <p>
-Number menyediakan utilitas untuk mengelola dan memvalidasi angka, seperti mengecek
-apakah sebuah nilai adalah bilangan bulat.
+Object Number menyediakan berbagai utilitas untuk bekerja dengan angka, termasuk
+validasi tipe data, konversi nilai, serta pengecekan kondisi tertentu seperti apakah
+sebuah nilai merupakan bilangan bulat atau bukan. Dengan Number, pengembang dapat
+menghindari kesalahan logika yang berkaitan dengan tipe data numerik.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const num = 10.5;
-console.log(Number.isInteger(num));
-&lt;/script&gt;
-</code></pre>
 
 <h4>11. OBJECT</h4>
 <p>
-Object digunakan untuk mengelola properti dan struktur data berbentuk objek.
+Object adalah struktur data utama dalam JavaScript yang digunakan untuk menyimpan
+pasangan properti dan nilai. Hampir seluruh konsep OOP di JavaScript dibangun di atas
+object. Standard library Object menyediakan berbagai method untuk mengelola properti,
+menyalin object, serta melakukan introspeksi terhadap struktur data.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const person = { name: "Eko" };
-console.log(Object.keys(person));
-&lt;/script&gt;
-</code></pre>
 
 <h4>12. PROXY</h4>
 <p>
-Proxy digunakan untuk memantau, memodifikasi, atau mengontrol akses terhadap sebuah
-object.
+Proxy memungkinkan pengembang untuk menyisipkan perilaku khusus saat terjadi interaksi
+terhadap sebuah object, seperti membaca, menulis, atau menghapus properti. Proxy sering
+digunakan untuk validasi data, logging, keamanan, dan penerapan konsep enkapsulasi dalam
+OOP secara lebih kuat.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const target = {};
-const proxy = new Proxy(target, {
-  get(obj, prop) {
-    return prop in obj ? obj[prop] : "Not Found";
-  }
-});
-console.log(proxy.name);
-&lt;/script&gt;
-</code></pre>
 
 <h4>13. REFLECT</h4>
 <p>
-Reflect menyediakan method standar untuk melakukan manipulasi object secara aman
-dan konsisten.
+Reflect menyediakan sekumpulan method standar untuk melakukan operasi terhadap object,
+seperti membaca, menulis, dan menghapus properti secara eksplisit. Reflect sering
+digunakan bersama Proxy untuk menciptakan kode yang lebih konsisten, aman, dan mudah
+dipahami.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const obj = { a: 1 };
-Reflect.set(obj, "b", 2);
-console.log(obj);
-&lt;/script&gt;
-</code></pre>
 
 <h4>14. REGEXP</h4>
 <p>
-RegExp digunakan untuk pencarian dan validasi teks berdasarkan pola tertentu.
+RegExp (Regular Expression) digunakan untuk pencarian, pencocokan, dan validasi teks
+berdasarkan pola tertentu. Dengan RegExp, pengembang dapat memeriksa format input,
+melakukan pencarian kompleks dalam string, serta memanipulasi teks secara efisien.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const regex = /js/i;
-console.log(regex.test("JavaScript"));
-&lt;/script&gt;
-</code></pre>
 
 <h4>15. SAMPLE JSON</h4>
 <p>
-Contoh data JSON sederhana yang biasa digunakan dalam pertukaran data.
+Sample JSON merupakan contoh struktur data dalam format JSON yang sering digunakan
+untuk menyimpan dan mengirim data. Struktur ini mendukung tipe data dasar seperti
+string, number, boolean, array, dan object, sehingga sangat fleksibel untuk berbagai
+kebutuhan aplikasi.
 </p>
-
-<pre><code>
-{
-  "name": "Eko",
-  "age": 20,
-  "isStudent": true
-}
-</code></pre>
 
 <h4>16. SET</h4>
 <p>
-Set digunakan untuk menyimpan data unik tanpa adanya nilai duplikat.
+Set adalah struktur data yang menyimpan nilai unik tanpa duplikasi. Set sangat berguna
+ketika aplikasi membutuhkan daftar data yang tidak boleh memiliki nilai ganda, seperti
+daftar ID, kategori unik, atau hasil pengolahan data tertentu.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const set = new Set([1, 2, 2, 3]);
-console.log(set);
-&lt;/script&gt;
-</code></pre>
 
 <h4>17. STRING</h4>
 <p>
-String menyediakan berbagai method untuk manipulasi teks seperti perubahan huruf,
-pemotongan, dan pencarian karakter.
+String digunakan untuk mengelola data teks. JavaScript menyediakan banyak method String
+untuk manipulasi teks, seperti pengubahan huruf besar dan kecil, pemotongan teks,
+pencarian karakter, serta penggabungan string. String merupakan elemen penting dalam
+pengolahan input dan output pengguna.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const text = "JavaScript";
-console.log(text.toUpperCase());
-&lt;/script&gt;
-</code></pre>
 
 <h4>18. SYMBOL</h4>
 <p>
-Symbol digunakan untuk membuat identifier unik pada object agar tidak terjadi konflik
-dengan properti lain.
+Symbol adalah tipe data primitif yang digunakan untuk membuat identifier unik. Symbol
+sering digunakan sebagai key object untuk mencegah konflik nama properti, terutama pada
+aplikasi besar atau library yang saling berinteraksi.
 </p>
-
-<pre><code>
-&lt;script&gt;
-const id = Symbol("id");
-console.log(id);
-&lt;/script&gt;
-</code></pre>
 
 <h4>KESIMPULAN</h4>
 <p>
-JavaScript Standard Library menyediakan berbagai fitur bawaan yang sangat membantu
-dalam pengolahan data, logika program, dan penerapan prinsip OOP. Dengan memahami
-standard library, program menjadi lebih efisien, aman, dan mudah dikembangkan.
+JavaScript Standard Library menyediakan berbagai fitur bawaan yang sangat penting dalam
+pengembangan aplikasi modern. Dengan memahami dan memanfaatkan standard library secara
+optimal, pengembang dapat menulis kode yang lebih efisien, aman, terstruktur, serta
+mudah dikembangkan dan dirawat.
 </p>
